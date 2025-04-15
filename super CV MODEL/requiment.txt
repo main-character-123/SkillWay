@@ -1,0 +1,9 @@
+1.pip install spacy
+2. pip install pandas
+3.pip install pyMuPDF
+4.python -m spacy download en_core_web_sm
+5.pip install fuzzywuzzy
+6.pip install numpy==1.24.0
+7.python -m spacy init fill-config base_config.cfg config.cfg
+8.pip install transformers
+9.pip install sentencepiece

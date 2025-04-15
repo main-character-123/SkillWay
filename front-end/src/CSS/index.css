@@ -1,0 +1,268 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-display: swap !important;
+  background-color: #f7f7f8 !important;
+  scroll-behavior: smooth;
+}
+
+a,
+li,
+ul {
+  text-decoration: none !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+img {
+  display: block !important;
+  background-size: cover !important;
+  object-fit: cover !important;
+  background-position: center !important;
+}
+
+table td {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.truncate {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table td img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main {
+  padding-top: 72px;
+}
+
+@media (max-width: 991px) {
+  .main {
+    padding-top: 56px;
+  }
+}
+
+.logout-btn .logout-icon {
+  font-size: 1.5rem;
+  color: gray;
+  transition: color 0.3s ease;
+}
+.logout-btn:hover .logout-icon {
+  color: red;
+}
+
+.card {
+  overflow: hidden;
+}
+
+.btn-info:hover {
+  background-color: #cbc8c8 !important; /* Darker shade for hover */
+  border-color: #afadad !important;
+}
+
+.btn-white {
+  background-color: white !important;
+}
+
+.btn-white:hover {
+  background-color: #efefef !important; /* Darker shade for hover */
+}
+
+/* Lists */
+.editor-content ul li {
+  list-style: disc !important;
+}
+
+.editor-content ol li {
+  list-style: decimal !important;
+}
+
+/* Editor Container */
+.editor-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Toolbar Styles */
+.editor-toolbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  background-color: #ff9500;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar-btn {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 10px !important;
+  font-size: 18px !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s, color 0.3s !important;
+  border-radius: 5px !important;
+}
+
+.toolbar-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+}
+
+.toolbar-btn.active {
+  background-color: #d27c03 !important;
+  color: #fff !important;
+}
+
+.toolbar-btn svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* Editor Styles */
+.editor-content {
+  padding: 20px !important;
+  background-color: #fff !important;
+  border: 1px solid #ddd !important;
+  border-radius: 5px !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  color: #333 !important;
+  margin-top: 10px !important;
+}
+.ProseMirror {
+  /* Ensures full click area */
+  outline: none !important; /* Remove outline */
+  white-space: pre-wrap !important; /* Handle multiline text properly */
+  height: 300px !important;
+  overflow-y: scroll !important;
+}
+
+/* Fix for the focus state */
+.ProseMirror:focus {
+  outline: none !important;
+  border-color: #007bff !important; /* Optional: blue border when focused */
+}
+
+/* Headings */
+.editor-content h1 {
+  font-size: 2em !important;
+  font-weight: bold !important;
+  margin-top: 20px !important;
+  margin-bottom: 10px !important;
+  color: #333 !important;
+}
+
+.editor-content h2 {
+  font-size: 1.5em !important;
+  font-weight: bold !important;
+  margin-top: 20px !important;
+  margin-bottom: 10px !important;
+  color: #333 !important;
+}
+
+/* Paragraphs */
+.editor-content p {
+  font-size: 16px !important;
+  margin-bottom: 15px !important;
+  color: #333 !important;
+}
+
+/* Lists */
+.editor-content ul,
+.editor-content ol {
+  margin-left: 20px !important;
+  margin-bottom: 15px !important;
+}
+
+.editor-content li {
+  margin-bottom: 5px !important;
+  margin-left: 20px !important;
+  font-size: 16px !important;
+  color: #333 !important;
+}
+
+/* Links */
+.editor-content a {
+  color: #ff9500 !important;
+  text-decoration: none !important;
+}
+
+.editor-content a:hover {
+  text-decoration: underline !important;
+}
+
+/* Blockquote */
+.editor-content blockquote {
+  background-color: #f9f9f9 !important;
+  border-left: 5px solid #ff9500 !important;
+  padding: 10px !important;
+  font-style: italic !important;
+  margin: 20px 0 !important;
+  color: #666 !important;
+}
+
+.editor-content blockquote p {
+  margin: 0 !important;
+}
+
+/* Images */
+.editor-content img {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 8px !important;
+  margin: 15px 0 !important;
+}
+
+/* Buttons */
+.editor-toolbar button {
+  cursor: pointer !important;
+  border: none !important;
+  background-color: transparent !important;
+  padding: 8px !important;
+  font-size: 18px !important;
+  color: #fff !important;
+  transition: background-color 0.3s !important;
+}
+
+.editor-toolbar button:hover {
+  background-color: #d27c03 !important;
+  color: #fff !important;
+}
+
+.editor-toolbar button.active {
+  background-color: #d27c03 !important;
+  color: #fff !important;
+}
+
+/* Custom Scrollbar */
+.editor-content::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.editor-content::-webkit-scrollbar-track {
+  background: #f1f1f1 !important;
+}
+
+.editor-content::-webkit-scrollbar-thumb {
+  background: #888 !important;
+  border-radius: 5px !important;
+}
+
+.editor-content::-webkit-scrollbar-thumb:hover {
+  background: #555 !important;
+}

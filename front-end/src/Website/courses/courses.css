@@ -1,0 +1,19 @@
+.course-card {
+  @media (min-width: 768px) {
+    width: 48% !important;
+  }
+}
+
+.lesson-item {
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.lesson-item:hover {
+  background-color: #f0f0f0; /* Light background color on hover */
+  transform: scale(1.02); /* Slight scaling effect */
+}
+
+.lesson-item:active {
+  transform: scale(0.98); /* Slight shrink on click */
+}
