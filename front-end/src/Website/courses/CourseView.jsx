@@ -62,6 +62,11 @@ export default function CourseView() {
     }
   };
 
+  const extractDriveFileId = (url) => {
+    const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+    return match ? match[1] : "";
+  };
+
   return (
     <Container className="my-5">
       <Breadcrumbs title={currCourse.name} />
@@ -72,8 +77,8 @@ export default function CourseView() {
         transition={{ duration: 0.5 }}
       >
         <div className="mb-4 text-center text-md-start">
-          <div className="between-flex  mb-3">
-            <h2 className="fs-1">{currCourse.name}</h2>
+          <div className="between-flex flex-column gap-2 flex-lg-row mb-3">
+            <h2 className="fs-2">{currCourse.name}</h2>
             <Button variant="primary text-light" onClick={fetchTestimonials}>
               {loading ? "Loading.." : "Course Testimonials"}
             </Button>
@@ -86,20 +91,24 @@ export default function CourseView() {
           {/* Video Player */}
           <div className="flex-grow-1 w-100">
             {currentVideo?.demoVideo ? (
-              <video
-                key={currentVideo._id} // Use _id here to uniquely identify the video
-                controls
-                className="w-100 rounded shadow"
-                style={{ maxHeight: "600px" }}
-              >
-                <source src={currentVideo.demoVideo} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <iframe
+                key={currentVideo._id}
+                src={`https://drive.google.com/file/d/${extractDriveFileId(
+                  currentVideo.demoVideo
+                )}/preview`}
+                width="100%"
+                height="480"
+                allow="autoplay"
+                allowFullScreen
+                className="rounded shadow border-0"
+                title={currentVideo.title}
+              ></iframe>
             ) : (
               <div className="text-center p-5 bg-light rounded">
                 Select a video to play
               </div>
             )}
+
             <h4 className="mt-3">{currentVideo?.title}</h4>
             <p className="mt-3 fs-19px px-4">{currentVideo?.description}</p>
           </div>
